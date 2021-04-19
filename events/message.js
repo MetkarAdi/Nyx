@@ -15,7 +15,7 @@ module.exports = {
                 message.channel.send(`${message.member} has levelled up to **Level ${user.level}**. Continue talking to level up!! `)
             }*/
         } else {
-            const randomXP = Math.floor(Math.random() * 25) + 1;
+            const randomXP = Math.floor(Math.random() * 39) + 1;
             const hasLeveledUp = await Levels.appendXp(message.author.id, message.guild.id, randomXP)
             if (hasLeveledUp) {
                 const user = await Levels.fetch(message.author.id, message.guild.id)
