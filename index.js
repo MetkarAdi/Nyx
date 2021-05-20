@@ -6,7 +6,7 @@ require('dotenv').config();
 const fs = require('fs')
 
 Levels.setURL(`mongodb+srv://Nyx:${process.env.PASS}@nyx.vn9wi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`);
-client.prefix = ';;';
+client.prefix = '!';
 client.commands = new Discord.Collection()
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
