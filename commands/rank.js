@@ -93,8 +93,14 @@ module.exports = {
                 .setDiscriminator(useer.discriminator)
             rank.build()
                 .then(data => {
-                    const attachment = new Discord.MessageAttachment(data, 'rank.png')
-                    message.channel.send(attachment)
+                    const attachment = new Discord.MessageAttachment(data, `RankCard.png`) //https://cdn.discordapp.com/attachments/${message.channel.id}/${client.user.lastMessageID}/rank.png
+                    const embed = new Discord.MessageEmbed()
+                    .setDescription(`${useer}'s rankcard`)
+                    .setImage("attachment://RankCard.png")
+                    .attachFiles(attachment)
+                    .setColor(bgColour)
+                    //message.channel.send(attachment)
+                    message.channel.send(embed)
                 })
         } else {
             return message.channel.send(`<a:no:829410893506150471> **${message.author.username}**, that command has been disabled in this channel`)

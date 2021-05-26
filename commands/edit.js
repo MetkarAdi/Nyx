@@ -4,7 +4,7 @@ module.exports = {
     name: 'edit',
     description: "helps editing xp/level of certain user",
     async execute(message, args, client) {
-        if (message.member.hasPermission('ADMINISTRATOR') || message.author.id === '756368169894936637') {
+        if (message.member.hasPermission('ADMINISTRATOR') || message.author.id === '756368169894936637' || message.author.id === '700235335380107364') {
             let usage = '!edit @member [xp, level] [add, set, remove] <number>';
             const mentionedMember = message.mentions.members.first() || message.guild.members.cache.get(args[0])
 
