@@ -75,7 +75,7 @@ module.exports = {
         /*let usernamee = message.author.username
         let discrimm = message.author.discriminator*/
 
-        /*if(message.channel.id !== '762222255400681492'){
+        /*if(message.channel.id !== '846674039342497792'){
             return message.channel.send(`<a:no:829410893506150471> **${message.author.username}**, that command has been disabled in this channel`)
         }
         else {*/
